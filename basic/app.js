@@ -1,12 +1,31 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-const heading = React.createElement(
-  "h1",
-  { id: "parent" }, // to give the heading
-  "Hello From child1"
+// const heading = (
+//   <h1 id="praz" className="pp">
+//     Hello from Pradeep
+//   </h1>
+// );
+
+// React Component
+// 1. Class Based Components and 2. Functional Based Components
+// React Components
+
+const Title = () => {
+  return <h1>Hello Pradeep</h1>;
+};
+
+const SubHeading = () => {
+  return <h3>Hi there</h3>;
+};
+const Heading = () => (
+  <div className="parent">
+    {Title()}
+    <h2 className="pp">Hello From PP</h2>
+    <SubHeading />
+  </div>
 );
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-root.render(heading);
+root.render(<Heading />);
